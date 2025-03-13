@@ -7,8 +7,12 @@ import (
 
 func main() {
 	const IMTPower = 2
-	userHeight := 1.72
-	userKg := 85.0
-	IMT := userKg / math.Pow(userHeight, IMTPower)
-	fmt.Println("IMT: ", IMT)
+	var userHeight float64
+	var userKg float64
+	fmt.Print("Enter your height: ")
+	fmt.Scan(&userHeight)
+	fmt.Print("Enter your weight: ")
+	fmt.Scan(&userKg)
+	IMT := userKg / math.Pow(userHeight / 100, IMTPower)
+	fmt.Printf("IMT: %.0f", IMT)
 }
